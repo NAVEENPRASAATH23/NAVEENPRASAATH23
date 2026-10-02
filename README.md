@@ -1,169 +1,120 @@
-<h1 align="center">Hi there, I'm Naveen Prasaath 👋</h1>
+<h1 align="center">Hi, I'm Naveen Prasaath 👋</h1>
 
 <p align="center">
   <a href="https://github.com/NAVEENPRASAATH23">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&width=650&lines=Cloud+%26+DevOps+Engineer;AWS+%C2%B7+Azure+%C2%B7+Kubernetes+%C2%B7+Terraform;Production+GitOps+%26+CI%2FCD+Automation;Infrastructure+as+Code+%26+Cloud+Security;Bridging+Cloud+Infrastructure+%26+AI+Systems" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&width=680&lines=Cloud+%26+DevSecOps+Engineer;Kubernetes+%26+GitOps+Practitioner;Open+Source+Enthusiast+%26+Contributor;Building+Secure%2C+Automated+Cloud+Platforms" alt="Typing SVG" />
   </a>
 </p>
 
 <p align="center">
   <a href="mailto:naveenprasaath65@gmail.com"><img src="https://img.shields.io/badge/Email-naveenprasaath65%40gmail.com-0284C7?style=flat-square&logo=gmail&logoColor=white" /></a>
-  <a href="https://github.com/NAVEENPRASAATH23"><img src="https://img.shields.io/github/followers/NAVEENPRASAATH23?label=GitHub%20Followers&style=flat-square&color=0284C7" /></a>
-  <img src="https://img.shields.io/badge/Experience-3%2B%20Years-059669?style=flat-square" />
-  <img src="https://img.shields.io/badge/Focus-Cloud%20Architecture%20%26%20DevOps-7C3AED?style=flat-square" />
+  <a href="https://github.com/NAVEENPRASAATH23"><img src="https://img.shields.io/github/followers/NAVEENPRASAATH23?label=Followers&style=flat-square&color=0284C7" /></a>
+  <img src="https://img.shields.io/badge/Role-Cloud%20%26%20DevSecOps-059669?style=flat-square" />
+  <img src="https://img.shields.io/badge/Focus-Open%20Source%20%26%20Platform%20Eng-7C3AED?style=flat-square" />
 </p>
 
 ---
 
-### 👨‍💻 Professional Summary
+### 👨‍💻 About Me
 
-I am a **Cloud & DevOps Engineer** with **3+ years of hands-on experience** architecting, automating, and securing production-grade cloud environments across **AWS, Azure, and Kubernetes**. 
+I am a **Cloud & DevSecOps Engineer** and **Open Source Enthusiast** with 3+ years of experience engineering secure, automated, and scalable platforms across **AWS, Azure, and Kubernetes**.
 
-My core focus centers on the complete DevOps lifecycle: transforming manual workflows into **Declarative Infrastructure as Code (Terraform)**, establishing resilient **GitOps & CI/CD delivery pipelines (GitHub Actions, Argo CD, Jenkins)**, optimizing containerized workloads, and enforcing **Zero-Trust Cloud Governance (Control Tower, IAM, SOPS)**.
-
-> ⚡ *"Automate everything that should be automated, monitor everything that matters, and build resilient, repeatable systems."*
+My work is driven by three core principles:
+1. **Shift-Left Security & DevSecOps**: Baking automated security scans, secret management, and compliance directly into CI/CD pipelines and infrastructure code.
+2. **Declarative Everything**: Managing cloud resources via modular **Terraform** and driving zero-drift deployments through **GitOps (Argo CD)**.
+3. **Open Source Collaboration**: Actively contributing to open-source software and developer tooling to build resilient, community-first solutions.
 
 ---
 
-## 🌟 Featured Open-Source Contribution
+## 🌟 Open Source Contributions
 
 ### 🚀 **[Laya (NandhaKishorM/laya)](https://github.com/NandhaKishorM/laya)** — High-Performance Neural Engine
-> **Official Contributor to Laya v0.3.23**
+> **Official Contributor · Released in v0.3.23**
 
-- **Merged PR [#759](https://github.com/NandhaKishorM/laya/pull/759)**: Added `--calibration` support to the ONNX evaluation CLI pipeline.
-- **DevOps & Platform Impact**:
-  - Implemented CLI argument validation, mutual dependency enforcement, and test harness execution for post-training calibrated ONNX models.
-  - Added comprehensive test suites ensuring zero regression, zero decision flips, and `0.000000` max probability delta across production multilingual checkpoints.
-  - Bridges Cloud/DevOps infrastructure practices with machine learning inference workflows.
+- **Merged PR [#759](https://github.com/NandhaKishorM/laya/pull/759)**: Added `--calibration` post-training support to the ONNX evaluation CLI tooling.
+- **Platform & DevOps Value**:
+  - Engineered CLI argument validation, mutual dependency enforcement, and test suites.
+  - Verified across production multilingual checkpoints with **0 decision flips** and `0.000000` max probability delta.
+  - Demonstrates rigorous testing, code cleanliness, and cross-discipline collaboration on performance-critical systems.
 
 ---
 
-## 🏗️ End-to-End DevOps & Delivery Workflow
+## 🛡️ DevSecOps & Delivery Architecture
+
+I focus on embedding security at every tier of the delivery pipeline rather than treating it as an afterthought:
 
 ```text
-  Developer Push
+ ┌──────────────┐      Lint, SAST & Secrets Scan      ┌─────────────────────────┐
+ │ Code Commit  │ ──────────────────────────────────► │ GitHub Actions / Jenkins │
+ └──────┬───────┘                                     └────────────┬────────────┘
+        │                                                          │
+        ▼                                                          ▼ Multi-Stage Build
+ ┌──────────────┐      Vulnerability Scans (Trivy)    ┌─────────────────────────┐
+ │ Pull Request │ ◄────────────────────────────────── │  Secure Docker Image    │
+ └──────┬───────┘                                     └────────────┬────────────┘
+        │ Merged                                                   │ Signed & Pushed
+        ▼                                                          ▼
+ ┌──────────────┐      Declarative Sync & Drift Check ┌─────────────────────────┐
+ │   Argo CD    │ ◄────────────────────────────────── │   Container Registry    │
+ └──────┬───────┘                                     └─────────────────────────┘
         │
-        ▼
- ┌──────────────┐     Automated CI Checks     ┌────────────────┐
- │ GitHub / Git │ ──────────────────────────► │ GitHub Actions │
- └──────────────┘                             │   or Jenkins   │
-        │                                     └───────┬────────┘
-        │ Declarative GitOps                          │ Build & Scan
-        ▼                                             ▼
- ┌──────────────┐    Sync Manifests / Kustomize  ┌────────────────┐
- │   Argo CD    │ ◄───────────────────────────── │ Docker Registry│
- └──────┬───────┘                                └────────────────┘
-        │
-        ▼ Automated Deployment
- ┌─────────────────────────────────────────────────────────────┐
- │            Production Kubernetes (EKS / AKS)                │
- │  Ingress ──► Services ──► Pods (HPA / Resource Limits)      │
- └──────────────────────────────┬──────────────────────────────┘
-                                │ Telemetry
-                                ▼
-         ┌───────────────────────────────────────────┐
-         │ Prometheus & Grafana / CloudWatch Monitor │
-         └───────────────────────────────────────────┘
+        ▼ Zero-Downtime Deployment
+ ┌──────────────────────────────────────────────────────────────────────────────┐
+ │                    Production Kubernetes (EKS / AKS)                         │
+ │  • Zero-Trust Network Policies  • RBAC & Least-Privilege  • SOPS Encryption  │
+ │  • Horizontal Pod Autoscaling   • Ingress & TLS           • Resource Quotas  │
+ └──────────────────────────────────────┬───────────────────────────────────────┘
+                                        │ Observability & Telemetry
+                                        ▼
+                 ┌──────────────────────────────────────────────┐
+                 │  Prometheus · Grafana · CloudWatch & Alerts  │
+                 └──────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🛠️ Technical Competencies
+## 🛠️ Core Capabilities & Technology Stack
 
-### ☁️ Cloud Architecture & Governance
-<table>
-  <tr>
-    <td width="20%"><b>Amazon Web Services (AWS)</b></td>
-    <td>
-      <b>Core Compute & Containers:</b> EC2, EKS, ECS, Lambda, Auto Scaling<br/>
-      <b>Networking & Hybrid:</b> VPC, Transit Gateway, Route 53, CloudFront, Direct Connect, BGP, NAT, Peering<br/>
-      <b>Storage & Databases:</b> S3, EBS, EFS, RDS, Aurora, DynamoDB<br/>
-      <b>Enterprise Governance:</b> AWS Organizations, Control Tower, Multi-Account Structure, SCPs, IAM Identity Center, Security Groups, NACLs<br/>
-      <b>Migration & Discovery:</b> AWS MAP, Migration Evaluator, 7Rs Migration Strategy
-    </td>
-  </tr>
-  <tr>
-    <td width="20%"><b>Microsoft Azure</b></td>
-    <td>
-      <b>Compute & Platforms:</b> Azure Kubernetes Service (AKS), Azure Container Apps<br/>
-      <b>Networking & Security:</b> Virtual Networks (VNets), Azure Load Balancers, Azure RBAC, Microsoft Defender for Cloud<br/>
-      <b>Data & Integration:</b> Storage Accounts, Azure Data Factory, Database Migration Service (DMS), Integration Runtime
-    </td>
-  </tr>
-</table>
-
-### ☸️ Containers, Kubernetes & GitOps
 <p>
+  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" />
+  <img src="https://img.shields.io/badge/Microsoft_Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white" />
   <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" />
-  <img src="https://img.shields.io/badge/Amazon_EKS-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" />
-  <img src="https://img.shields.io/badge/Azure_AKS-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white" />
+  <img src="https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white" />
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
   <img src="https://img.shields.io/badge/Argo_CD-EF7B4D?style=for-the-badge&logo=argo&logoColor=white" />
-  <img src="https://img.shields.io/badge/Kustomize-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" />
-</p>
-
-- **Cluster Architecture & Administration**: Control plane components, Kubelet, Kube-proxy, Node scheduling, Taints & Tolerations.
-- **Workload Management**: Deployments, StatefulSets, DaemonSets, ConfigMaps, Secrets, Namespaces, Ingress (NGINX), Jobs/CronJobs.
-- **Autoscaling & Resilience**: Horizontal Pod Autoscaler (HPA), Vertical Pod Autoscaler (VPA), Resource requests & limits, OOMKilled troubleshooting.
-- **GitOps Delivery**: Continuous synchronization, drift detection, and declarative cluster manifests using **Argo CD** & **Kustomize**.
-- **Container Engineering**: Multi-stage Docker builds, layer caching, image minimization, vulnerability mitigation.
-
-### 🔄 CI/CD & Infrastructure as Code (IaC)
-<p>
-  <img src="https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white" />
   <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" />
-  <img src="https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white" />
-  <img src="https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white" />
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
+  <img src="https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white" />
+  <img src="https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white" />
 </p>
 
-- **Terraform**: Reusable modular architecture, state management (remote S3/DynamoDB locks), plan/apply governance, multi-environment isolation.
-- **CI/CD Pipelines**: Declarative GitHub Actions workflows, branch protection integration, self-hosted runner infrastructure, Docker-based Jenkins pipelines.
-- **Configuration & OS**: Ansible playbooks and inventory automation, Linux system administration, shell scripting, process & network diagnostics.
+### 🛡️ DevSecOps & Security
+- **Pipeline Security**: Shift-Left testing, automated dependency scanning, and container vulnerability management.
+- **Identity & Access (IAM)**: Zero-Trust architectures, AWS Identity Center, Multi-Account Service Control Policies (SCPs), Azure RBAC, Kubernetes RBAC.
+- **Secrets & Data Protection**: Encrypted secrets management using Mozilla SOPS, AWS Secrets Manager, and Kubernetes Secrets.
+- **Cloud Governance**: Multi-account AWS Organizations & Control Tower Landing Zones, Microsoft Defender for Cloud, Network ACLs, and Security Groups.
 
-### 📊 Observability, Security & Scripting
-<table>
-  <tr>
-    <td width="25%"><b>Monitoring & Metrics</b></td>
-    <td>Prometheus, Grafana (custom dashboards & alerts), AWS CloudWatch, Azure Monitor, Container & Cluster Telemetry</td>
-  </tr>
-  <tr>
-    <td><b>Security & Secrets</b></td>
-    <td>AWS IAM Least-Privilege, Kubernetes RBAC, Mozilla SOPS, AWS Secrets Manager, Defender for Cloud, Network ACLs & Security Groups</td>
-  </tr>
-  <tr>
-    <td><b>Scripting & Languages</b></td>
-    <td>Python, Bash / Shell, C, Java, Perl, TCL, SQL</td>
-  </tr>
-  <tr>
-    <td><b>Emerging Interests</b></td>
-    <td>Platform Engineering, Internal Developer Platforms (IDP), AI Agents for Infrastructure Automation, Kubernetes AI/ML Workloads</td>
-  </tr>
-</table>
+### ☁️ Cloud Architecture & Modernization
+- **Multi-Cloud Expertise**: Designing highly available, scalable infrastructure across **AWS** and **Microsoft Azure**.
+- **Networking & Connectivity**: VPC / VNet design, Public/Private subnets, Transit Gateways, Direct Connect, BGP routing, and Load Balancers.
+- **Cloud Migration & Modernization**: Experienced with **AWS MAP**, Migration Evaluator, and executing migration pathways using the **7Rs Framework**.
 
----
+### ☸️ Kubernetes, Containers & GitOps
+- **Cluster Orchestration**: In-depth administration of **EKS** and **AKS** — Pod lifecycle, Ingress controllers, Namespaces, StatefulSets, and DaemonSets.
+- **Resilience & Autoscaling**: Implementing HPA, VPA, fine-tuned resource requests/limits, and scheduling strategies (Taints, Tolerations, Node Affinity).
+- **GitOps Continuous Delivery**: Continuous synchronization, self-healing deployments, and declarative configuration using **Argo CD** and **Kustomize**.
+- **Container Engineering**: Multi-stage Docker optimization, image slimming, and build caching.
 
-## 🎯 Engineering Philosophy
-
-```text
- 1. Understand Problem & Requirements
-        │
- 2. Design Secure Multi-Tier Cloud Architecture
-        │
- 3. Codify with Infrastructure as Code (Terraform)
-        │
- 4. Automate Delivery with CI/CD & GitOps
-        │
- 5. Enforce Least-Privilege Security & Compliance
-        │
- 6. Monitor, Alert & Observe (Prometheus / Grafana)
-        │
- 7. Continuously Optimize Performance, Reliability & Cost
-```
+### 🏗️ Infrastructure as Code & Automation
+- **Terraform**: Modular IaC architecture, remote state locking (S3 + DynamoDB), plan/apply governance, and automated provisioning.
+- **CI/CD Engineering**: Declarative GitHub Actions workflows, branch protection rules, self-hosted runners, and Docker-based Jenkins pipelines.
+- **Automation & Scripting**: Infrastructure and operational automation using **Python**, **Bash / Shell**, and Linux systems diagnostics.
+- **Observability**: End-to-end monitoring and alerting with **Prometheus**, **Grafana**, CloudWatch, and container health telemetry.
 
 ---
 
-## 📊 GitHub Analytics
+## 📈 GitHub Activity & Stats
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=NAVEENPRASAATH23&show_icons=true&theme=tokyonight&hide_border=true&title_color=38bdf8" width="48%" />
@@ -176,10 +127,10 @@ My core focus centers on the complete DevOps lifecycle: transforming manual work
 
 ---
 
-## 🤝 Connect & Collaborate
+## 🤝 Let's Connect
 
-I'm always keen to exchange ideas around **Cloud Architecture**, **Kubernetes**, **GitOps**, **Platform Engineering**, and **Cloud Modernization**.
+I am passionate about collaborating on **DevSecOps**, **Kubernetes & GitOps**, **Cloud Architecture**, and **Open Source Tools**.
 
 - 📧 **Email**: [naveenprasaath65@gmail.com](mailto:naveenprasaath65@gmail.com)
 - 🐙 **GitHub**: [@NAVEENPRASAATH23](https://github.com/NAVEENPRASAATH23)
-- 💬 *Feel free to reach out to discuss scalable infrastructure or open-source collaborations!*
+- 💬 *Feel free to open an issue or reach out to discuss platform engineering, security automation, or open source!*
